@@ -14,4 +14,10 @@ install:
 - pip install -r requirements.txt
 script:
 - cd decide
-- ./manage.py test --keepdb
+- ./manage.py test census --keepdb
+notifications:
+  email:
+    recipients:
+      - aleblaper1@alum.us.es
+    on_success: always
+    on_failure: always
